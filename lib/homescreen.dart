@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:koperasi_rakyat/components/loginscreen.dart';
@@ -215,11 +217,110 @@ class _homeScreenState extends State<homeScreen> {
               ],
             ),
           ),
+          SizedBox(
+            height: 24.0,
+          ),
           Container(
-            margin: EdgeInsets.only(top: 16.0, bottom: 27.0),
-            height: 20.0,
-            width: 430.0,
-            color: Colors.black,
+            margin: EdgeInsets.only(left: 50.0),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/iconcolor.png',
+                  height: 20.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 14.0),
+                  child: Text(
+                    'Tagihan Iuran',
+                    style: GoogleFonts.rubik(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 90.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        '(Belum Dibayar)',
+                        style: GoogleFonts.rubik(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Container(
+            width: 400,
+            height: 86,
+            decoration: BoxDecoration(
+                color: Color(0xFFF6F6F6),
+                borderRadius: BorderRadius.circular(10.0)),
+            padding: EdgeInsets.only(left: 15.0, top: 25.0),
+            child: Row(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Iuran Wajib',
+                      style: GoogleFonts.rubik(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Bulan Mei 2021',
+                          style: GoogleFonts.rubik(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 120.0, bottom: 20.0),
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Rp 20.000',
+                            style: GoogleFonts.rubik(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF015E31),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
